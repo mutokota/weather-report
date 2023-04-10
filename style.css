@@ -1,0 +1,11 @@
+#section {
+  width: 100%;
+  max-width: 300px;
+  margin: 100px auto;
+}
+ul{
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
