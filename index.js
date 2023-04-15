@@ -11,19 +11,17 @@ button.addEventListener("click", () => {
     .then((data) => {
       const Name = data.name;
       const Weather = data.weather[0].description;
-      const Metric = Math.round(data.main.feels_like) + "度";
+      const Metric = Math.round(data.main.feels_like) + "℃";
 
-      const cityInformation = document.querySelector("#cityInformation");
-      const li1 = document.createElement("li");
-      li1.innerText = "都市名：" + Name;
-      cityInformation.appendChild(li1);
+      const cityName = document.querySelector(".cityName");
+      cityName.innerText = "都市名：" + Name;
 
-      const li2 = document.createElement("li");
-      li2.innerText = "天気：" + Weather;
-      cityInformation.appendChild(li2);
+      const cityWeather = document.querySelector(".cityWeather");
+      cityWeather.innerText = "天気：" + Weather;
 
-      const li3 = document.createElement("li");
-      li3.innerText = "温度：" + Metric;
-      cityInformation.appendChild(li3);
+      const cityMetric = document.querySelector(".cityMetric");
+      cityMetric.innerText = "温度：" + Metric;
     });
 });
+
+
