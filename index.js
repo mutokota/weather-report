@@ -21,7 +21,32 @@ button.addEventListener("click", () => {
 
       const cityMetric = document.querySelector(".cityMetric");
       cityMetric.innerText = "温度：" + Metric;
+
+      const img = document.querySelector(".img img");
+      switch (data.weather[0].main) {
+        case "Clear":
+          img.src = "/imges/clear.png";
+          break;
+
+        case "Clouds":
+          img.src = "/imges/cloud.png";
+          break;
+
+        case "Haze":
+          img.src = "/imges/mist.png";
+          break;
+
+        case "Rain":
+          img.src = "/imges/rain.png";
+          break;
+
+        case "Snow":
+          img.src = "/imges/snow.png";
+          break;
+
+        default:
+          img.src = "";
+          break;
+      }
     });
 });
-
-

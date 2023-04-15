@@ -9,3 +9,7 @@ ul{
 ul li {
   list-style: none;
 }
+.img img {
+  height: 70px;
+
+}
