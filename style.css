@@ -1,15 +1,40 @@
+body {
+  background-color: cornflowerblue;
+  color: #fff;
+}
 #section {
   width: 100%;
-  max-width: 300px;
+  max-width: 250px;
   margin: 100px auto;
+  text-align: center;
 }
-ul{
+ul {
   padding: 0;
+  display: flex;
+  justify-content: center;
 }
 ul li {
   list-style: none;
+  text-align: left;
 }
-.img img {
-  height: 70px;
+.img {
+  border-bottom: solid #fff 1px;
+  padding-bottom: 10px;
+}
 
+.img img {
+  width: 70px;
+}
+.input {
+  border-radius: 20px;
+  border: #fff solid 1px;
+}
+.button {
+  width: 50px;
+  border-radius: 20px;
+  color: darkturquoise;
+  border: #fff solid 1px;
+}
+.button:hover {
+  opacity: 0.8;
 }

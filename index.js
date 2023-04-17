@@ -22,6 +22,8 @@ button.addEventListener("click", () => {
       const cityMetric = document.querySelector(".cityMetric");
       cityMetric.innerText = "温度：" + Metric;
 
+      console.log(data);
+
       const img = document.querySelector(".img img");
       switch (data.weather[0].main) {
         case "Clear":
@@ -32,7 +34,7 @@ button.addEventListener("click", () => {
           img.src = "/imges/cloud.png";
           break;
 
-        case "Haze":
+        case "Mist":
           img.src = "/imges/mist.png";
           break;
 
