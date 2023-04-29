@@ -1,9 +1,12 @@
 const button = document.querySelector(".button");
+const cityInformation = document.getElementById("cityInformation");
 
 button.addEventListener("click", () => {
   const APIkey = "c568b496fe4413cac89afabc4c798e86";
-  const city = document.querySelector(".search input").value;
+  let city = document.querySelector(".search input").value;
+  cityInformation.classList.remove("information");
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ja&appid=${APIkey}&units=metric`;
+
   fetch(url)
     .then((response) => {
       return response.json();
@@ -50,5 +53,8 @@ button.addEventListener("click", () => {
           img.src = "";
           break;
       }
+      cityInformation.classList.add("information");
     });
+
+  city = document.querySelector(".search input").value = "";
 });

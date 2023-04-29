@@ -10,14 +10,29 @@ body {
   margin: 80px auto;
   text-align: center;
   border-radius: 20px;
-  padding: 20px 0;
+  padding: 50px 0 20px 0;
 }
-ul {
+#cityInformation {
   padding: 0;
   display: flex;
   justify-content: center;
 }
-ul li {
+.information {
+  animation: cityInformation 0.5s forwards;
+  opacity: 0;
+}
+@keyframes cityInformation {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#cityInformation li {
   list-style: none;
   text-align: left;
 }
